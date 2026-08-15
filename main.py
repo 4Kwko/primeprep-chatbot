@@ -1274,21 +1274,35 @@ async def verificar_webhook(request: Request):
 # =========================================================
 
 def assinatura_valida(corpo: bytes, cabecalho: str) -> bool:
-    """Confere o X-Hub-Signature-256 usando o APP_SECRET."""
+    secret = (APP_SECRET or "").strip()
 
-    if not APP_SECRET:
-        return True   # sem secret configurado, não valida
+    log.info("DEBUG SIG | header_presente=%s", bool(cabecalho))
+    log.info("DEBUG SIG | header=%s", cabecalho[:20] + "..." if cabecalho else None)
+    log.info("DEBUG SIG | secret_presente=%s", bool(secret))
+    log.info("DEBUG SIG | secret_len=%s", len(secret))
+    log.info("DEBUG SIG | corpo_len=%s", len(corpo))
+
+    if not secret:
+        log.warning("DEBUG SIG | sem APP_SECRET, aceitando temporariamente")
+        return True
 
     if not cabecalho or not cabecalho.startswith("sha256="):
+        log.warning("DEBUG SIG | header ausente ou inválido")
         return False
 
+    recebido = cabecalho.split("=", 1)[1].strip()
+
     esperado = hmac.new(
-        APP_SECRET.encode(),
+        secret.encode("utf-8"),
         corpo,
         hashlib.sha256
     ).hexdigest()
 
-    return hmac.compare_digest(esperado, cabecalho.split("=", 1)[1])
+    log.info("DEBUG SIG | esperado=%s", esperado[:12])
+    log.info("DEBUG SIG | recebido=%s", recebido[:12])
+    log.info("DEBUG SIG | bateu=%s", hmac.compare_digest(esperado, recebido))
+
+    return hmac.compare_digest(esperado, recebido)
 
 
 @app.post("/webhook")
