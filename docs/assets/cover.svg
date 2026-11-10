@@ -1,20 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
-  <title id="title">Prime Prep</title>
-  <desc id="desc">Chatbot para Instagram. Python, FastAPI, Instagram API e SQLite. Do primeiro contato ao cadastro de interessados.</desc>
-  <rect width="960" height="280" fill="#123c43"/>
-  <g fill="#f5f1e7" font-family="Arial, sans-serif">
-    <text x="42" y="46" font-size="18">Projeto de João Montagner</text>
-    <text x="38" y="137" font-size="78" font-family="Georgia, serif">Prime Prep</text>
-    <text x="42" y="188" font-size="27">Do primeiro contato ao cadastro.</text>
-    <text x="42" y="236" font-size="18">Python · FastAPI · Instagram API · SQLite</text>
-  </g>
-  <g fill="none" stroke="#eeaa88" stroke-width="2">
-    <rect x="652" y="55" width="254" height="46" rx="5"/>
-    <rect x="652" y="126" width="254" height="46" rx="5"/>
-    <rect x="652" y="197" width="254" height="46" rx="5"/>
-    <path d="M779 101 V126 M779 172 V197"/>
-  </g>
-  <g fill="#f5f1e7" font-family="Arial, sans-serif" font-size="19" text-anchor="middle">
-    <text x="779" y="84">Mensagem recebida</text><text x="779" y="155">Conversa orientada</text><text x="779" y="226">Interesse registrado</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 300" role="img" aria-labelledby="title desc">
+<title id="title">Prime Prep — chatbot para Instagram</title><desc id="desc">Python, FastAPI e SQLite. Código, demonstração local e testes disponíveis.</desc>
+<rect width="1040" height="300" rx="8" fill="#101619"/><g font-family="Consolas, monospace">
+<text x="36" y="47" font-size="15" fill="#a4d8b4">01 / PROJETO EM DESTAQUE</text>
+<text x="36" y="107" font-size="40" font-weight="700" fill="#edf3ed">primeprep-chatbot</text>
+<text x="36" y="145" font-size="19" fill="#a5b5b1">Atendimento no Instagram, com estado persistido.</text>
+<path d="M36 176H1004" stroke="#33413e"/>
+<text x="36" y="213" font-size="18" fill="#edf3ed">webhook → menus → cadastro → atendimento humano</text>
+<text x="36" y="266" font-size="16" fill="#a4d8b4">Python / FastAPI / SQLite</text>
+<text x="653" y="266" font-size="16" fill="#a5b5b1">código + demo local + testes</text></g></svg>
