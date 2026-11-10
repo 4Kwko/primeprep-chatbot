@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 370" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo do chatbot</title>
+  <desc id="desc">Instagram envia eventos ao FastAPI. O roteador persiste estado e leads em SQLite e responde pela API. Atendimento humano pausa o bot.</desc>
+  <rect width="960" height="370" fill="#f5f1e7"/>
+  <g fill="#123c43" font-family="Arial, sans-serif">
+    <text x="32" y="43" font-size="23">Uma conversa, estado persistido.</text>
+    <text x="32" y="72" font-size="16">Fluxo implementado em main.py</text>
+  </g>
+  <g stroke="#123c43" stroke-width="2" fill="none">
+    <rect x="32" y="112" width="180" height="72" rx="5"/>
+    <rect x="264" y="112" width="180" height="72" rx="5"/>
+    <rect x="496" y="112" width="200" height="72" rx="5"/>
+    <path d="M212 148 H264 M444 148 H496 M696 148 H780 V238 H696 M596 184 V238 M354 184 V314 H122 V184"/>
+    <rect x="496" y="238" width="200" height="72" rx="5"/>
+    <rect x="748" y="268" width="180" height="72" rx="5"/>
+    <path d="M696 148 H838 V268"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#123c43" text-anchor="middle" font-size="20">
+    <text x="122" y="143">Instagram</text><text x="122" y="168" font-size="15">mensagens e botões</text>
+    <text x="354" y="143">FastAPI</text><text x="354" y="168" font-size="15">/webhook</text>
+    <text x="596" y="143">Roteador</text><text x="596" y="168" font-size="15">menus e cadastro</text>
+    <text x="596" y="269">SQLite</text><text x="596" y="294" font-size="15">usuários e leads</text>
+    <text x="838" y="299">Equipe</text><text x="838" y="324" font-size="15">pausa de 12 horas</text>
+    <text x="235" y="302" font-size="16">resposta pela API</text>
+    <text x="806" y="219" font-size="15">estado</text>
+  </g>
+  <g fill="#ae542e"><circle cx="264" cy="148" r="5"/><circle cx="496" cy="148" r="5"/><circle cx="596" cy="238" r="5"/><circle cx="838" cy="268" r="5"/></g>
+</svg>

@@ -1,4 +1,9 @@
 .env
+.env.*
+!.env.example
 __pycache__/
 *.pyc
-primeprep.db
+*.db
+*.db-*
+.venv/
+.pytest_cache/
